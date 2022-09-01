@@ -6,13 +6,13 @@ const pokemon = require("./pokedex/models/pokemon.js");
 app.use(express.urlencoded({extended : false}));
 app.use(methodOverride("_method"));
 
-app.get("/pokedex", (req, res)=>{
+app.get("/pokemon", (req, res)=>{
     res.render("index_views.ejs", {
         pokemons : pokemon,
     });
 });
 
-app.get("/pokedex/:id", (req, res)=>{
+app.get("/pokemon/:id", (req, res)=>{
     res.render("show_views.ejs", {
         pokemon : pokemon[req.params.id],
     });
