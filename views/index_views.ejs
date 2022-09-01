@@ -7,6 +7,9 @@
     <title>Pokedex</title>
 </head>
 <body>
-   <h1>hi</h1> 
+   <h1>Welcome to the Pokedex</h1>
+   <% for(let i=0; i < pokemons.length; i++){ %>
+    <img src=<%=pokemons[i].img%>>
+<%}%> 
 </body>
 </html>
