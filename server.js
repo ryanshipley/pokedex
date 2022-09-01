@@ -12,4 +12,10 @@ app.get("/pokedex", (req, res)=>{
     });
 });
 
+app.get("/pokedex/:id", (req, res)=>{
+    res.render("show_views.ejs", {
+        pokemon : pokemon[req.params.id],
+    });
+});
+
 app.listen(3000);
