@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create!</title>
+</head>
+<body>
+    <h1>Create a new pokemon</h1>
+    <form action="/pokemon" method="POST">
+        name: <input type="text" name="name" placeholder="Pikachu" />
+        type: <input type="text" name="type" placeholder="ex. water, fire" />
+        image: <input type="text" name="img" placeholder="http://imgur.com" />
+        stats: <input type="text" name="stats" placeholder="hp, attack, defense, spattack, spdefense, speed"/>
+        <input type="submit" value="Create Pokemon"/>
+    </form>
+    <nav>
+        <a href="/pokemon">Back to Pokedex</a>
+    </nav>
+</body>
+</html>

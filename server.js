@@ -12,6 +12,19 @@ app.get("/pokemon", (req, res)=>{
     });
 });
 
+app.get("/pokemon/new", (req, res)=>{
+    res.render("new.ejs")
+});
+
+app.delete("/pokemon/:id", (req, res)=>{
+    pokemon.splice(req.params.id, 1)
+    res.redirect("/pokemon");
+})
+app.post("/pokemon", (req, res)=>{
+    pokemon.push(req.body);
+    res.redirect("/pokemon");
+});
+
 app.get("/pokemon/:id", (req, res)=>{
     res.render("show_views.ejs", {
         pokemon : pokemon[req.params.id],
