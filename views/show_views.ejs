@@ -11,9 +11,8 @@
     <h1><%=pokemon.name%></h1>
     <img src=<%=pokemon.img%>>
     <h3>Type:</h3> 
-    <ul><% for(let i=0 ; i < pokemon.type.length; i++) {%>
-        <li><%=pokemon.type[i]%></li>
-    <%}%>
+    <ul id="type">
+        <li><%=pokemon.type%></li>
     </ul>
     <h3>Stats:</h3>
     <ul>
@@ -26,8 +25,12 @@
     </ul>
     <style>
        ul{
-        list-style: none;;
+        list-style: none;
        }
+       /* #type{
+        display: flex;
+        flex-direction: row;
+       } */
     </style>
 </body>
 </html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Pokedex</title>
+    <link rel="stylesheet" href="/css/app.css" />
+  </head>
+  <body>
+    <h1>Edit Pokemon</h1>
+    <form action="/pokemon<%=index%>?_method=PUT" method="POST">
+      <!--  NOTE: the form is pre-populated with values for the server-->
+      Name: <input type="text" name="name" value="<%=pokemon.name%>" /><br />
+      Type: <input type="text" name="type" value="<%=pokemon.type%>" /><br />
+      Image: <input type="text" name="img" value="<%=pokemon.img%>" />
+      Hp: <input type="text" name="hp" value="<%=pokemon.stats.hp%>" />
+      Attack: <input type="text" name="attack" value="<%=pokemon.stats.attack%>" />
+      Defense: <input type ="text" name="defense" value="<%=pokemon.stats.defense%>" />
+      <input type="submit"  value="Submit Changes" />
+    </form>
+  </body>
+</html>
