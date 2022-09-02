@@ -7,14 +7,13 @@
     <title>Pokedex</title>
 </head>
 <body>
-   <h1>Welcome to the Pokedex</h1>
-   <a href="pokemon/new">Add a new pokemon</a>
+   <h1>Welcome to the Pokedex</h1><span><a href="pokemon/new">Add a new pokemon</a></span>
    <% for(let i=0; i < pokemons.length; i++){ %>   
     <a href="/pokemon/<%=i%>"><img src=<%=pokemons[i].img%>></a>
-    <form action="/pokemon/<%=i; %>?_method=DELETE" method="POST">
+   <span> <form action="/pokemon/<%=i; %>?_method=DELETE" method="POST">
     <input type="submit" value="DELETE">
     </form>
-    <a href="/pokemon/<%=i%>/edit">EDIT</a>
+    <a href="/pokemon/<%=i%>/edit">EDIT</a></span>
 <%}%>
 <style>
     img{
